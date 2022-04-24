@@ -9,8 +9,6 @@ namespace eShopSolution.Data.Configuration
 {
     public class ProductConfiguration : IEntityTypeConfiguration<Product>
     {
-       
-
         public void Configure(EntityTypeBuilder<Product> builder)
         {
             builder.ToTable("Products");
@@ -26,7 +24,6 @@ namespace eShopSolution.Data.Configuration
             builder.Property(x => x.Stock).IsRequired().HasDefaultValue(0);
 
             builder.Property(x => x.ViewCount).IsRequired().HasDefaultValue(0);
-
 
 
         }
