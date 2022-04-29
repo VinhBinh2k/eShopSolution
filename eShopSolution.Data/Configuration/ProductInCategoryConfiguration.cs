@@ -21,5 +21,7 @@ namespace eShopSolution.Data.Configuration
             builder.HasOne(t => t.Category).WithMany(pc => pc.ProductInCategories)
               .HasForeignKey(pc => pc.CategoryId);
         }
+
+        
     }
 }
