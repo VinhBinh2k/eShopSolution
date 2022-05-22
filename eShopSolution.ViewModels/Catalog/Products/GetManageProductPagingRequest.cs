@@ -12,3 +12,4 @@ namespace eShopSolution.ViewModels.Catalog.Products
         public List<int> CategoryIds { get; set; }
     }
 }
+ 
