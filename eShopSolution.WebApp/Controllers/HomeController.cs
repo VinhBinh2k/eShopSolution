@@ -1,4 +1,4 @@
-﻿using eShopSolution.WepApp.Models;
+﻿using eShopSolution.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eShopSolution.WepApp.Controllers
+namespace eShopSolution.WebApp.Controllers
 {
     public class HomeController : Controller
     {

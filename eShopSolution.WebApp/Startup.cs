@@ -9,7 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace eShopSolution.WepApp
+namespace eShopSolution.WebApp
 {
     public class Startup
     {
