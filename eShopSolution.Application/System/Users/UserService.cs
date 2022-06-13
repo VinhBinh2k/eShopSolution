@@ -1,6 +1,6 @@
 ﻿using eShopSolution.Data.Entities;
 using eShopSolution.Utilities.Exceptions;
-using eShopSolution.ViewModels.System;
+using eShopSolution.ViewModels.System.Users;
 using eShopSolution.ViewModels.Common;
 
 using Microsoft.AspNetCore.Http;
@@ -65,6 +65,8 @@ namespace eShopSolution.Application.System.Users
             return  new JwtSecurityTokenHandler().WriteToken(token);
         }
 
+        
+
         public async Task<bool> Register(RegisterRequest request)
         {
             var user = new AppUser()
@@ -83,5 +85,7 @@ namespace eShopSolution.Application.System.Users
             }
             return false;
         }
+
+       
     }
 }
