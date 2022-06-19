@@ -4,7 +4,7 @@ using eShopSolution.Application.System.Users;
 using eShopSolution.Data.EF;
 using eShopSolution.Data.Entities;
 using eShopSolution.Utilities.Constants;
-using eShopSolution.ViewModels.System.User;
+
 using eShopSolution.ViewModels.System.Users;
 using FluentValidation;
 using FluentValidation.AspNetCore;
@@ -38,6 +38,8 @@ namespace eShopSolution.BackendApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
+
             services.AddDbContext<EShopDBContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString(SystemConstants.MainConnectionString)));
 
