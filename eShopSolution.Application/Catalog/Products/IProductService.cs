@@ -1,4 +1,5 @@
 ﻿
+using eShopSolution.Data.Entities;
 using eShopSolution.ViewModels.Catalog.ProductImages;
 using eShopSolution.ViewModels.Catalog.Products;
 
@@ -20,7 +21,7 @@ namespace eShopSolution.Application.Catalog.Products
 
         Task<int> Delete(int productId);
 
-        Task<ProductViewModel> GetById(int productId, string languageId);
+        Task<ProductVm> GetById(int productId, string languageId);
 
         Task<bool> UpdatePrice(int productId, decimal newPrice);
 
@@ -28,7 +29,7 @@ namespace eShopSolution.Application.Catalog.Products
 
         Task AddViewcount(int productId);
 
-        Task<PagedResult<ProductViewModel>> GetAllPaging(GetManageProductPagingRequest request);
+        Task<PagedResult<ProductVm>> GetAllPaging(GetManageProductPagingRequest request);
 
         Task<int> AddImage(int productId, ProductImageCreateRequest request);
 
@@ -40,7 +41,7 @@ namespace eShopSolution.Application.Catalog.Products
 
         Task<List<ProductImageViewModel>> GetListImages(int productId);
 
-        Task<PagedResult<ProductViewModel>> GetAllByCategoryId(string languageId, GetPublicProductPagingRequest request);
+        Task<PagedResult<ProductVm>> GetAllByCategoryId(string languageId, GetPublicProductPagingRequest request);
 
 
     }

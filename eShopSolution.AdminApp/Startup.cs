@@ -46,9 +46,14 @@ namespace eShopSolution.AdminApp
             services.AddSession(options =>{
                 options.IdleTimeout = TimeSpan.FromMinutes(30);
             });
-
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
             services.AddTransient<IUserApiClient, UserApiClient>();
+            services.AddTransient<IRoleApiClient, RoleApiClient>();
+            services.AddTransient<ILanguageApiClient, LanguageApiClient>();
+            services.AddTransient<IProductApiClient, ProductApiClient>();
+            services.AddTransient<ICategoryApiClient, CategoryApiClient>();
+
 
             IMvcBuilder builder = services.AddRazorPages();
             var enviroment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
@@ -75,7 +80,7 @@ namespace eShopSolution.AdminApp
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
-            app.UseHttpsRedirection();
+  //          app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseAuthentication();
